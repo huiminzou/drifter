@@ -3,6 +3,7 @@
 Created on Wed Apr 11 10:39:27 2018
 
 @author: huimin
+track particle using two models(FVCOM vs ROMS) and drifter, plot them in one figure
 """
 
 import numpy as np
