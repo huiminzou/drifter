@@ -37,7 +37,7 @@ ax.plot([drifters['lon'][i],drifters['lon'][i+1]],[drifters['lat'][i],drifters['
 ax.text(drifters['lon'][index_start]+0.01,drifters['lat'][index_start]-0.02,'start',fontsize=12)
 ax.text(drifters['lon'][index_end]+0.02,drifters['lat'][index_end],'end')
 ##############FVCOM#############
-m26=np.load('/home/hxu/huiminzou/from xiaojian/particle-tracking-using-fvcom-model-master/30yr_FVCOM2007621_7days_1point.npy')#'m_ps2011-2010_630.npy'
+m26=np.load('/home/hxu/huiminzou/from xiaojian/particle-tracking-using-fvcom-model-master/30yr_FVCOM2007621_7days_1point.npy')#this file is from another program "using fvcom to track particle.py"
 p=m26.tolist()
 
 for a in np.arange(len(p['lon'][0])):
@@ -52,7 +52,7 @@ for a in np.arange(len(p['lon'][0])):
         ax.plot(p['lon'][0][a][0:],p['lat'][0][a][0:],'g-',label='GOM3')#,linewidth=0.5)
 
 ###################ROMS###############################
-data_file=np.load('/home/hxu/huiminzou/from xiaojian/particle-tracking-using-roms-model-master/particle-tracking-using-roms-model-master/20180411/ROMS_2007-6-21_28_1point.npy')
+data_file=np.load('/home/hxu/huiminzou/from xiaojian/particle-tracking-using-roms-model-master/particle-tracking-using-roms-model-master/20180411/ROMS_2007-6-21_28_1point.npy')#this file is from another program "track_roms.py"
 data=data_file.tolist()
 ax.scatter(data['lon'][0][0],data['lat'][0][0],color='green')
 ax.scatter(data['lon'][0][-1],data['lat'][0][-1],color='red')
